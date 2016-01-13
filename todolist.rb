@@ -22,7 +22,7 @@ class TodoList
     @items.delete(removed_item)
   end
 
-# Updates completion of an item in @items
+  # Updates completion of an item in @items
   def update_completion(item, new_status)
     @items.find(item).change_status(new_status)
   end
@@ -35,7 +35,7 @@ class Item
     @completed_status = false
   end
 
-# Changes completion_status
+  # Changes completion_status
   def change_status(new_status)
     @completed_status = new_status.to_b
   end
