@@ -5,9 +5,9 @@ class TodoList
 
   # methods and stuff go here
   # Initialize todo list with a title and no items
-  def initialize(list_title)
+  def initialize(list_title = 'new List')
     @title = list_title
-    @items = [] # Starts empty! No Items yet!
+    @items = []
   end
 
   def rename(new_name)
@@ -39,6 +39,10 @@ class TodoList
     @items[number - 1].priority = new_priority
   end
 
+  def update_description(number, new_description)
+    @items[number - 1].description = new_description
+  end
+
   def print
     @items.sort! { |x, y| x.priority <=> y.priority }
     puts
@@ -47,18 +51,24 @@ class TodoList
     @items.each(&:print_item)
   end
 
+  def create_savefile
+    { title: @title, items: @items }
+  end
+
   def save_to_file
-    File.open('todo.txt', 'w') { |file| file.write(YAML.dump(@items)) }
+    File.open('todo.txt', 'w') { |file| file.write(YAML.dump(create_savefile)) }
   end
 
   def load_from_file(file_name)
-    @items = YAML.load(File.read(file_name))
+    savefile = YAML.load(File.read(file_name))
+    @items = savefile[:items]
+    @title = savefile[:title]
   end
 end
 
 class Item
   # methods and stuff go here
-  attr_accessor :priority, :completed_status
+  attr_accessor :priority, :completed_status, :description
   def initialize(item_description, priority = 1)
     @description = item_description
     @completed_status = false

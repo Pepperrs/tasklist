@@ -1,0 +1,19 @@
+---
+:title: New List
+:items:
+- !ruby/object:Item
+  description: item 4
+  completed_status: false
+  priority: 1
+- !ruby/object:Item
+  description: item b
+  completed_status: false
+  priority: 2
+- !ruby/object:Item
+  description: item a
+  completed_status: false
+  priority: 3
+- !ruby/object:Item
+  description: item 2
+  completed_status: true
+  priority: 5
