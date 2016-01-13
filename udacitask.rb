@@ -26,6 +26,6 @@ list.rename('New List')
 # Print the list
 list.print
 # Change priority
-list.update_completion(1, 5)
+list.update_priority(1, 5)
 # Print the list
 list.print

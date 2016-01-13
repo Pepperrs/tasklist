@@ -33,8 +33,8 @@ class TodoList
     @items[number - 1].completed_status = new_status
   end
 
-  def update_priority(number, priority)
-    @items[number - 1].priority = priority
+  def update_priority(number, new_priority)
+    @items[number - 1].priority = new_priority
   end
 
   def print
