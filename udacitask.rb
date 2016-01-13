@@ -29,3 +29,8 @@ list.print
 list.update_priority(1, 5)
 # Print the list
 list.print
+# Add items with priorities
+list.add_item('item a',3)
+list.add_item('item b',2)
+# Print the list
+list.print

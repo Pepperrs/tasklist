@@ -1,3 +1,5 @@
+require 'yaml'
+
 class TodoList
   attr_reader :title, :items
 
@@ -38,10 +40,19 @@ class TodoList
   end
 
   def print
+    @items.sort! { |x, y| x.priority <=> y.priority }
     puts
     puts @title
     puts 'state | description | priority'
     @items.each(&:print_item)
+  end
+
+  def save_to_file
+    File.open('todo.txt', 'w') { |file| file.write(YAML.dump(@items)) }
+  end
+
+  def load_from_file(file_name)
+    @items = YAML.load(File.read(file_name))
   end
 end
 
