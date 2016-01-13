@@ -19,19 +19,23 @@ class TodoList
 
   # Deletes an Item in the array of Items
   def remove_item(removed_item)
-    if remove_item.is_type?(string)
+    if removed_item.is_a?(String)
       @items.delete(removed_item)
-    elsif remove_item.is_type?(integer)
-      @items.delete_at(remove_item + 1)
+    elsif removed_item.is_a?(Integer)
+      @items.delete_at(removed_item - 1)
     else
       return nil
     end
-
   end
 
   # Updates completion of an item in @items
-  def update_completion(item, new_status)
-    @items.find(item).change_status(new_status)
+  def update_completion(number, new_status)
+  puts @items.find{|item| number - 1}.change_status(new_status)
+  end
+
+  def print
+    puts
+    @items.each(&:print_item)
   end
 end
 
@@ -44,6 +48,18 @@ class Item
 
   # Changes completion_status
   def change_status(new_status)
-    @completed_status = new_status.to_b
+    @completed_status = new_status
+  end
+
+  def completed?
+    @completion_status
+  end
+
+  def mark_completed
+    print completed? ? 'x' : ' '
+  end
+
+  def print_item
+    print "\n#{mark_completed} | #{@description}"
   end
 end
