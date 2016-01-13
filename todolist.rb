@@ -14,9 +14,14 @@ class TodoList
 
   # Creates a new Item and adds it to the array of Items
   def add_item(new_item)
-    item = Item.new(new_item)
-    @items.push(item)
+    @items.push(Item.new(new_item))
   end
+
+def remove_item(removed_item)
+  @items.delete(removed_item)
+end
+
+
 end
 
 class Item
