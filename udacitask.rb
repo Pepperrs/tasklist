@@ -6,7 +6,7 @@ list = TodoList.new('Old List')
 list.add_item('item 1')
 list.add_item('item 2')
 list.add_item('item 3')
-list.add_item('item 4')
+list.add_item('item 3')
 # Print the list
 list.print
 # Delete the first item
@@ -22,7 +22,7 @@ list.update_completion(1, true)
 # Print the list
 list.print
 # Update the title of the list
-list.rename('New List')
+list.rename_title('New List')
 # Print the list
 list.print
 # Change priority
@@ -41,7 +41,7 @@ savedList = TodoList.new
 savedList.load_from_file('todo.txt')
 puts 'We have now loaded our List. We will rename it to show the difference'
 # Rename savedList
-savedList.rename('Saved List')
+savedList.rename_title('Saved List')
 # Print the new List
 savedList.print
 # We can also change the name of an item to make the change more visibke.

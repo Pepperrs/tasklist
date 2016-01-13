@@ -10,13 +10,17 @@ class TodoList
     @items = []
   end
 
-  def rename(new_name)
+  def name_taken?(name)
+    @items.map {|item| item.description }.include?(name)
+  end
+
+  def rename_title(new_name)
     @title = new_name
   end
 
   # Creates a new Item and adds it to the array of Items
   def add_item(new_item, priority = 1)
-    @items.push(Item.new(new_item, priority))
+    @items.push(Item.new(name_taken?(new_item) ? "#{new_item}(2)" : new_item , priority))
   end
 
   # Deletes an Item in the array of Items
