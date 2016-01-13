@@ -30,11 +30,13 @@ class TodoList
 
   # Updates completion of an item in @items
   def update_completion(number, new_status)
-  puts @items.find{|item| number - 1}.change_status(new_status)
+    @items.find{|item| number - 1}.change_status(new_status)
   end
 
   def print
     puts
+    puts @title
+    puts "state | Description"
     @items.each(&:print_item)
   end
 end
@@ -56,10 +58,10 @@ class Item
   end
 
   def mark_completed
-    print completed? ? 'x' : ' '
+    print completed? ? 'Done ' : '     '
   end
 
   def print_item
-    print "\n#{mark_completed} | #{@description}"
+    print "#{mark_completed} | #{@description}\n"
   end
 end
