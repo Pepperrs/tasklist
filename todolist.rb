@@ -19,7 +19,14 @@ class TodoList
 
   # Deletes an Item in the array of Items
   def remove_item(removed_item)
-    @items.delete(removed_item)
+    if remove_item.is_type?(string)
+      @items.delete(removed_item)
+    elsif remove_item.is_type?(integer)
+      @items.delete_at(remove_item + 1)
+    else
+      return nil
+    end
+
   end
 
   # Updates completion of an item in @items

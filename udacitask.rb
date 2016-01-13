@@ -3,7 +3,10 @@ require_relative 'todolist.rb'
 # Creates a new todo list
 list = TodoList.new('Things to Learn')
 # Add four new items
-
+list.add_item('make a List')
+list.add_item('print the List')
+list.add_item('complete an item')
+list.add_item('save the List')
 # Print the list
 
 # Delete the first item
