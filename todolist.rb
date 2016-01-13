@@ -13,8 +13,8 @@ class TodoList
   end
 
   # Creates a new Item and adds it to the array of Items
-  def add_item(new_item)
-    @items.push(Item.new(new_item))
+  def add_item(new_item, priority = 1)
+    @items.push(Item.new(new_item, priority))
   end
 
   # Deletes an Item in the array of Items
@@ -36,16 +36,17 @@ class TodoList
   def print
     puts
     puts @title
-    puts 'state | Description'
+    puts 'state | Description | priority'
     @items.each(&:print_item)
   end
 end
 
 class Item
   # methods and stuff go here
-  def initialize(item_description)
+  def initialize(item_description, priority = 1)
     @description = item_description
     @completed_status = false
+    @priority = priority
   end
 
   # Changes completion_status
@@ -62,6 +63,6 @@ class Item
   end
 
   def print_item
-    print "#{mark_completed} | #{@description}\n"
+    print "#{mark_completed} | #{@description} | #{@priority}\n"
   end
 end
