@@ -55,6 +55,7 @@ class TodoList
     { title: @title, items: @items }
   end
 
+  # code for saving and loading has been learned from http://stackoverflow.com/a/4310299
   def save_to_file
     File.open('todo.txt', 'w') { |file| file.write(YAML.dump(create_savefile)) }
   end
