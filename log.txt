@@ -1,0 +1,135 @@
+commit e5a27391cbf07586d92a51fcc4d1a55a93b5c03b
+Author: Peter Schüllermann <peter.schuellermann@gmail.com>
+Date:   Wed Jan 13 13:13:07 2016 +0100
+
+    refactor list#rename to list#rename_title
+    add complementary name_taken? function
+    add_item now renames the item, when another one with the same name is already present
+
+commit dd4f44aaff9eeea3f2eb8c5b1c2f9aa4f33671a0
+Author: Peter Schüllermann <peter.schuellermann@gmail.com>
+Date:   Wed Jan 13 12:43:14 2016 +0100
+
+    add source of saving and loading
+
+commit 2ac5590069064fb4dbea969294f237aea58b128b
+Author: Peter Schüllermann <peter.schuellermann@gmail.com>
+Date:   Wed Jan 13 12:35:44 2016 +0100
+
+    add rename of items
+    add steps in sequence to display behaviour
+
+commit ce304a4cfa009e7a8af1c61ccc80d9a57d9a60f1
+Author: Peter Schüllermann <peter.schuellermann@gmail.com>
+Date:   Wed Jan 13 11:56:41 2016 +0100
+
+    add save and load mechanisms
+
+commit f63f0f2c0ce6f1d8fb112b8d8641a57beb683fba
+Author: Peter Schüllermann <peter.schuellermann@gmail.com>
+Date:   Wed Jan 13 11:36:46 2016 +0100
+
+    add change_priority to sequence
+
+commit 10efa777e189748f382f12cb62e9cfe078f7856e
+Author: Peter Schüllermann <peter.schuellermann@gmail.com>
+Date:   Wed Jan 13 11:30:12 2016 +0100
+
+    fix update functions now select the correct item
+    beautify
+
+commit a0ae30e23e67a549d6581226d48a0e3cc0fc7030
+Author: Peter Schüllermann <peter.schuellermann@gmail.com>
+Date:   Wed Jan 13 11:28:54 2016 +0100
+
+    fix update_completion
+    it works now
+
+commit a36574d2ac28dce08f0fae1e62b26fbcc5517421
+Author: Peter Schüllermann <peter.schuellermann@gmail.com>
+Date:   Wed Jan 13 11:13:17 2016 +0100
+
+    add priority to items
+
+commit 2916ee724e8cb251ab3931e820e7d6954c1a6417
+Author: Peter Schüllermann <peter.schuellermann@gmail.com>
+Date:   Wed Jan 13 11:05:38 2016 +0100
+
+    beautify
+
+commit 99faf6c62ee12165055231acb762d262e4f71fc7
+Author: Peter Schüllermann <peter.schuellermann@gmail.com>
+Date:   Wed Jan 13 11:04:39 2016 +0100
+
+    add TodoList#print
+
+commit 2d7ef7f98bdc32a275d39def393f660da2129823
+Author: Peter Schüllermann <peter.schuellermann@gmail.com>
+Date:   Wed Jan 13 10:49:26 2016 +0100
+
+    repair update_completion
+
+commit 3ac7b875caab2f6c215fb64a94fb80026fafe8cb
+Author: Peter Schüllermann <peter.schuellermann@gmail.com>
+Date:   Wed Jan 13 10:11:16 2016 +0100
+
+    add code to remove_item to delete by item number
+    add sequence to udacitask.rb
+
+commit ea73bd1490273919d6d668f70817d11b0023bd9c
+Author: Peter Schüllermann <peter.schuellermann@gmail.com>
+Date:   Wed Jan 13 09:54:57 2016 +0100
+
+    beautify
+
+commit 1e882504c031786dc808bb941b0836c18e347433
+Author: Peter Schüllermann <Peter.schuellermann@gmail.com>
+Date:   Wed Jan 13 08:19:26 2016 +0100
+
+    add new_features.txt
+
+commit 0b3c8967dcc370b4023acaf00d92d9c566e772da
+Author: Peter Schüllermann <Peter.schuellermann@gmail.com>
+Date:   Wed Jan 13 08:13:16 2016 +0100
+
+    add functions to alter the status of an item
+
+commit 53f2347c48a4ec165191d1b1086f8643fa7c8116
+Author: Peter Schüllermann <Peter.schuellermann@gmail.com>
+Date:   Wed Jan 13 07:57:13 2016 +0100
+
+    add remove_item to TodoList
+
+commit 43c9bf7a8fe425cdf05d1ea362ea0dca4185d2e2
+Author: Peter Schüllermann <Peter.schuellermann@gmail.com>
+Date:   Wed Jan 13 07:55:06 2016 +0100
+
+    move add_item to TodoList
+    add rename fo TodoList
+
+commit 4651bf7edefbbf189b82edcc1ec18045539b2d36
+Author: Peter Schüllermann <Peter.schuellermann@gmail.com>
+Date:   Wed Jan 13 07:46:04 2016 +0100
+
+    add basic functionality
+      TodoList init + attr_reader(title and items)
+      Item init + add_item
+
+commit 582e17d259c980e64dcb7534c22b37cea2b9f8d2
+Merge: 1977efb b4faf8f
+Author: Peter Schüllermann <Peter.schuellermann@gmail.com>
+Date:   Wed Jan 13 07:15:14 2016 +0100
+
+    Merge branch 'master' of github.com:Pepperrs/tasklist
+
+commit 1977efb8653d5b0dce790a849c7139b2c9f8fc1d
+Author: Peter Schüllermann <Peter.schuellermann@gmail.com>
+Date:   Wed Jan 13 07:11:17 2016 +0100
+
+    initial commit
+
+commit b4faf8f4475a27007973b367563af47834fa2b7a
+Author: Peter Schüllermann <Pepperrs@users.noreply.github.com>
+Date:   Wed Jan 13 07:09:27 2016 +0100
+
+    Initial commit
