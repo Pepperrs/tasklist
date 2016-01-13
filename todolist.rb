@@ -30,19 +30,24 @@ class TodoList
 
   # Updates completion of an item in @items
   def update_completion(number, new_status)
-    @items.find { |_item| number - 1 }.change_status(new_status)
+    @items[number].completed_status = new_status
+  end
+
+  def update_priority(number, priority)
+    @items[number].priority = priority
   end
 
   def print
     puts
     puts @title
-    puts 'state | Description | priority'
+    puts 'state | description | priority'
     @items.each(&:print_item)
   end
 end
 
 class Item
   # methods and stuff go here
+  attr_accessor :priority, :completed_status
   def initialize(item_description, priority = 1)
     @description = item_description
     @completed_status = false
@@ -50,16 +55,9 @@ class Item
   end
 
   # Changes completion_status
-  def change_status(new_status)
-    @completed_status = new_status
-  end
-
-  def completed?
-    @completion_status
-  end
 
   def mark_completed
-    print completed? ? 'Done ' : '     '
+    print @completed_status ? 'Done ' : '     '
   end
 
   def print_item
