@@ -17,11 +17,15 @@ class TodoList
     @items.push(Item.new(new_item))
   end
 
-def remove_item(removed_item)
-  @items.delete(removed_item)
-end
+  # Deletes an Item in the array of Items
+  def remove_item(removed_item)
+    @items.delete(removed_item)
+  end
 
-
+# Updates completion of an item in @items
+  def update_completion(item, new_status)
+    @items.find(item).change_status(new_status)
+  end
 end
 
 class Item
@@ -29,5 +33,10 @@ class Item
   def initialize(item_description)
     @description = item_description
     @completed_status = false
+  end
+
+# Changes completion_status
+  def change_status(new_status)
+    @completed_status = new_status.to_b
   end
 end
